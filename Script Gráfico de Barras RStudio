@@ -1,0 +1,37 @@
+##desafio 100 dias com R
+##dia 17
+##gráfico de barras
+
+
+#gráfico simples
+
+Notas<-c(10,6,8,9)
+barplot(Notas)
+
+#personalizandp o gráfico 
+
+names(Notas)<-c("primeira","segunda","terceira","quarta")
+barplot(Notas)
+
+barplot(Notas,xlab = "provas",ylab = "notas",main = "Minhas notas")
+
+barplot(Notas,col = c("green","pink","purple","black"),border = "red")
+
+barplot(Notas,xlab = "provas",ylab = "notas",main = "Minhas notas",
+        col = c("green","pink","purple","black"),border = "red")
+
+#transformando dados em gráficos rapidamente
+
+data()
+
+sono<-sleep
+
+barplot(tapply(sono$extra,sono$group,mean))
+
+
+#gráfico completo
+
+barplot(tapply(sono$extra,sono$group,mean),col = c("green","black"),
+        border = "red",xlab = "Grupo",ylab = "Média de sono",
+        main = "Dados do sono dos estudantes")
+
